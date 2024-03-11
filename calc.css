@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image:linear-gradient( rgba(235, 135, 135, 0.5), rgba(0,0,0,0.2)), url(./images/backgr.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* There is an effect that looks like 3D in the container, the box shadow is used to Increase the effect */
+.calculator {
+    width: 370px; /* I used here to Increase the calculator size */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px; 
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+/* You can use the gap to increased the gap between buttons */
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+}
+
+.calculator .buttons #value {
+    grid-column: span 4;
+    height: 90px;
+    line-height: 80px;
+    padding: 0 20px; 
+    border-radius: 10px;
+    background: #c4ce8a;
+    text-align: right;
+    font-size: 1.5em;
+    color: #000;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    direction: rtl;
+}
+
+.calculator .buttons span {
+    padding: 20px; 
+    min-width: 50px; /* To increased the button width, use this min-width */
+    text-align: center;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.); /* Also the 3D effect was Added here using the box shadow*/
+    font-size: 1.5em;
+    font-weight: 700;
+    flex-grow: 0;
+}
+
+.calculator .buttons span:hover {
+    background: #ccc;
+}
+
+.calculator .buttons #clear {
+    background: #ff6161; 
+    color: #fff; 
+    padding-left:2px;
+    padding-right: 3px;
+    
+    
+}
+
+.calculator .buttons #equal {
+    background: #922222; 
+    color: #fff; 
+}
+
+.calculator .buttons #delete {
+    background: #922222; 
+    color: #fff; 
+}
+
+.calculator .buttons #onOffButton {
+    background: #ff6161; 
+    color: #fff; 
+}
+
+.cal-name{
+    text-align: center;
+    font-size: 1.0em;
+    font-weight: 600;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    color:#922222;
+}
+.codername {
+    text-align: center;
+    font-size: 1.0em;
+    font-weight: 800;
+    padding-bottom: 15px;
+    /* margin-top: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color:#922222;
+}
+
